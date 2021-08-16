@@ -31,7 +31,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.png D:\a\wallpaper.png
         copy wallpaper.bat D:\a\wallpaper.bat
-        copy "1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip" "C:\Users\Public\Desktop\Milad\1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip"
+        copy "1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip" "C:\Users\Public\Desktop\Milad.zip"
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Connect To RDP  CPU 2 Core - 7GB Ram - 256 SSD(SirMeti).
