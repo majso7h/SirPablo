@@ -17,8 +17,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/loop.bat -OutFile loop.bat
     - name: Mendownload Launcher.
       run: |
-	Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/FastConfigVPS.zip -OutFile FastConfigVPS.zip
-	Invoke-WebRequest https://yun.ir/ocv5ld -OutFile 1Bz0Hy5N5qzJDSU8zx23Q_Ru9Oi8YZWgu.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/FastConfigVPS.zip -OutFile FastConfigVPS.zip
+        Invoke-WebRequest https://yun.ir/ocv5ld -OutFile 1Bz0Hy5N5qzJDSU8zx23Q_Ru9Oi8YZWgu.zip
         Invoke-WebRequest https://yun.ir/kb6cn7 -OutFile "1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip"
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
