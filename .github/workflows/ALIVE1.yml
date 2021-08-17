@@ -17,6 +17,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/loop.bat -OutFile loop.bat
     - name: Mendownload Launcher.
       run: |
+	Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/FastConfigVPS.zip -OutFile FastConfigVPS.zip
+	Invoke-WebRequest https://yun.ir/ocv5ld -OutFile 1Bz0Hy5N5qzJDSU8zx23Q_Ru9Oi8YZWgu.zip
         Invoke-WebRequest https://yun.ir/kb6cn7 -OutFile "1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip"
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
@@ -31,7 +33,9 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.png D:\a\wallpaper.png
         copy wallpaper.bat D:\a\wallpaper.bat
-        copy "1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip" "C:\Users\Public\Desktop\Milad.zip"
+        copy FastConfigVPS.zip C:\Users\Public\Desktop\FastConfigVPS.zip
+        copy 1Bz0Hy5N5qzJDSU8zx23Q_Ru9Oi8YZWgu.zip C:\Users\Public\Desktop\YTView.zip
+        copy "1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip" "C:\Users\Public\Desktop\milad.zip"
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Connect To RDP  CPU 2 Core - 7GB Ram - 256 SSD(SirMeti).
