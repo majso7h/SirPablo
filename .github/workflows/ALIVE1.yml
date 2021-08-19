@@ -14,6 +14,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/wallpaper.png -OutFile wallpaper.png
         Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/WinrarSirMeti.exe -OutFile WinrarSirMeti.exe
         Invoke-WebRequest https://raw.githubusercontent.com/miladphoenix/i/main/loop.bat -OutFile loop.bat
     - name: Mendownload Launcher.
       run: |
@@ -33,6 +34,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.png D:\a\wallpaper.png
         copy wallpaper.bat D:\a\wallpaper.bat
+        copy A_WatchTime.zip C:\Users\Public\Desktop\A_WatchTime.zip
         copy FastConfigVPS.zip C:\Users\Public\Desktop\FastConfigVPS.zip
         copy 1Bz0Hy5N5qzJDSU8zx23Q_Ru9Oi8YZWgu.zip C:\Users\Public\Desktop\YTView.zip
         copy "1mJnuh1RXfzElqpcJC0N2zbx6j1Sxerz6.zip" "C:\Users\Public\Desktop\milad.zip"
@@ -40,5 +42,7 @@ jobs:
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Connect To RDP  CPU 2 Core - 7GB Ram - 256 SSD(SirMeti).
       run: cmd /c start.bat
+    - name: Install Winrar
+      run: cmd /c C:\Users\Public\Desktop\WinrarSirMeti.exe WinrarSirMeti.exe /s
     - name: SirMeti.
       run: cmd /c loop.bat
